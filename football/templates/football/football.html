@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>This is the football app</h2>
+<form action='.' method='POST'> {% csrf_token %}
+  {{form.as_p}}
+  <input type='submit' value='Generate Teams' />
+</form>
+
+{% if order == "" %}
+  <hr>
+{% else %}
+  <h2>{{order}} team picked first!</h2>
+{% endif %}
+<h2>Blue Team</h2>
+<ul>
+  {% for player in blue_team %}
+    <li>{{player}}</li>
+  {% endfor %}
+</ul>
+<h2>Yellow Team</h2>
+<ul>
+  {% for player in yellow_team %}
+    <li>{{player}}</li>
+  {% endfor %}
+</ul>
+{% endblock %}
