@@ -1,7 +1,80 @@
-{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Football Team Randomiser</title>
+    <link rel="stylesheet" href="{% static 'css/football.css' %}">
+  </head>
+  <body>
 
-{% block content %}
-<h2>This is the football app</h2>
+    {% block content %}
+    <div class="main-container">
+        <div class="container-main-header">
+          <h1>Football Team Randomiser</h1>
+        </div>
+
+        <div class="container-input-ouput">
+          <div class="form">
+            <form action='.' method='POST'> {% csrf_token %}
+              {{form.as_p}}
+              <input type='submit' value='Generate Teams' />
+            </form>
+          </div>
+          <div class="team-zeus">
+            <div id="zeus-banner" class="team-banner">
+              <h2>Team Zeus</h2>
+            </div>
+            <div class="z-list">
+              <ul>
+                {% for player in blue_team %}
+                  <li>{{player}}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+          <div class="team-midas">
+            <div id="midas-banner" class="team-banner">
+              <h2>Team Midas</h2>
+            </div>
+            <div class="m-list">
+              <ul>
+                {% for player in yellow_team %}
+                  <li>{{player}}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="container-football-pitch">
+          <!-- <img src="images/football-pitch.jpg" alt="football pitch"> -->
+            <div class="pitch-left">
+              <p class="b1">{{blue_team.0}}</p>
+              <p class="b2">{{blue_team.3}}</p>
+              <p class="b3">{{blue_team.1}}</p>
+              <p class="b4">{{blue_team.4}}</p>
+              <p class="b5">{{blue_team.2}}</p>
+              <p class="b6">{{blue_team.6}}</p>
+              <p class="b7">{{blue_team.5}}</p>
+            </div>
+            <div class="pitch-right">
+              <p class="y1">{{yellow_team.0}}</p>
+              <p class="y2">{{yellow_team.3}}</p>
+              <p class="y3">{{yellow_team.1}}</p>
+              <p class="y4">{{yellow_team.4}}</p>
+              <p class="y5">{{yellow_team.2}}</p>
+              <p class="y6">{{yellow_team.6}}</p>
+              <p class="y7">{{yellow_team.5}}</p>
+            </div>
+      </div>
+    </div>
+    {% endblock %}
+
+  </body>
+</html>
+
+
+<!-- <h2>This is the football app</h2>
 <form action='.' method='POST'> {% csrf_token %}
   {{form.as_p}}
   <input type='submit' value='Generate Teams' />
@@ -23,5 +96,4 @@
   {% for player in yellow_team %}
     <li>{{player}}</li>
   {% endfor %}
-</ul>
-{% endblock %}
+</ul> -->

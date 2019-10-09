@@ -1,0 +1,165 @@
+body{
+  width:80%;
+  margin:auto;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  background-color: #d1e0e0;
+}
+
+.container-main-header{
+  display:flex;
+}
+
+.navbar{
+  display:flex;
+  justify-content: flex-start;
+}
+
+.container-input-ouput{
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.form{
+  flex: 1;
+}
+
+.team-zeus, .team-midas{
+  flex: 2;
+}
+
+.team-banner{
+  height:20%;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: auto;
+}
+
+#zeus-banner{
+  background-image: url('../images/zeus-dota.png');
+  background-color: #3399ff;
+}
+
+#midas-banner{
+  background-image: url('../images/midas-dota.png');
+  background-color: #ffcc00;
+}
+
+.team-banner h2{
+  margin:0;
+  padding:0;
+  text-align: center;
+}
+
+.container-football-pitch{
+  width:800px;
+  height:506px;
+  margin: auto;
+  position: relative;
+  background-image: url('../images/football-pitch.jpg')
+}
+
+.container-football-pitch p{
+  color:white;
+  margin:0;
+  padding:0;
+}
+
+.z-list{
+  background-color: #99ccff;
+}
+
+.m-list{
+  background-color: #ffeb99;
+}
+
+.b1{
+  position: absolute;
+  left: 8%;
+  top: 50%;
+}
+
+.b2{
+  position: absolute;
+  left: 20%;
+  top: 5%;
+}
+
+.b3{
+  position: absolute;
+  left: 40%;
+  top: 11%;
+}
+
+.b4{
+  position: absolute;
+  left: 20%;
+  bottom: 5%;
+}
+
+.b5{
+  position: absolute;
+  left: 40%;
+  bottom: 11%;
+}
+
+.b6{
+  position: absolute;
+  left: 30%;
+  top: 50%;
+}
+
+.b7{
+  position: absolute;
+  left: 43%;
+  top: 50%;
+}
+
+.y1{
+  position: absolute;
+  right: 8%;
+  top: 50%;
+}
+
+.y2{
+  position: absolute;
+  right: 20%;
+  top: 5%;
+}
+
+.y3{
+  position: absolute;
+  right: 40%;
+  top: 11%;
+}
+
+.y4{
+  position: absolute;
+  right: 20%;
+  bottom: 5%;
+}
+
+.y5{
+  position: absolute;
+  right: 40%;
+  bottom: 11%;
+}
+
+.y6{
+  position: absolute;
+  right: 30%;
+  top: 50%;
+}
+
+.y7{
+  position: absolute;
+  right: 43%;
+  top: 50%;
+}
+
+.container-main-header,
+.container-input-ouput div{
+  border: 1px #000 solid;
+  padding: 10px;
+}
